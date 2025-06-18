@@ -24,7 +24,7 @@ https://akshayaahh.github.io/wander-home/#reviews
 
 ### UX Rationale
 
-* Included below (keep reading!) or download ()
+* Included below (keep reading!) or download (https://github.com/akshayaahh/wander-home/blob/main/UX%20Rationale.pdf)
 
 ### Optional
 
