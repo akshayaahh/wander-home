@@ -1,4 +1,3 @@
-# wander-home
 # WanderHome 🏡
 
 Welcome to **WanderHome**, your gateway to a world of beautiful getaways. From tropical escapes to urban adventures, this fully responsive homepage is a modern, animated vacation rental interface — hand-crafted using HTML, Tailwind CSS, and GSAP.
