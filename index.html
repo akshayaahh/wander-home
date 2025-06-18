@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WanderHome</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/beach-house.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Logo Splash Screen -->
+  <div id="logoSplash" class="fixed inset-0 bg-white flex items-center justify-center z-[100]">
+    <h1 class="text-5xl font-bold text-blue-600 animate-pulse">WanderHome</h1>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div id="mainContent" class="opacity-0">
+    <!-- Navigation Bar -->
+    <nav class="w-full flex justify-between items-center px-6 py-4 shadow-md sticky top-0 bg-white z-50">
+      <div class="text-2xl font-bold text-blue-600">WanderHome</div>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#destinations" class="hover:text-blue-500">Destinations</a></li>
+        <li><a href="#categories" class="hover:text-blue-500">Categories</a></li>
+        <li><a href="#call-to-action" class="hover:text-blue-500">Become a Host</a></li>
+        <li><a href="#reviews" class="hover:text-blue-500">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?beach,vacation');">
+      <div class="bg-black bg-opacity-50 p-8 rounded-xl max-w-3xl w-full mx-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Find your perfect getaway</h1>
+        <p class="text-lg mb-6">Explore unique vacation rentals across the world</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <input type="text" placeholder="Location" class="p-3 rounded-md text-gray-900" />
+          <input type="date" class="p-3 rounded-md text-gray-900" />
+          <input type="date" class="p-3 rounded-md text-gray-900" />
+          <input type="number" placeholder="Guests" class="p-3 rounded-md text-gray-900" />
+        </div>
+        <button class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold">Search</button>
+      </div>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section id="destinations" class="py-20 px-6 bg-gray-50">
+      <h2 class="text-3xl font-bold text-center mb-10">Featured Destinations</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="https://www.wallpaperbetter.com/wallpaper/854/704/961/paris-france-city-evening-lights-pont-alexandre-iii-bridge-2K-wallpaper.jpg" alt="Paris" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Paris, France</h3>
+            <p class="text-sm text-gray-600">Romantic escapes and iconic sights</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="https://www.worldatlas.com/r/w1200-q80/upload/88/3b/8e/pura-ulun-danu-bratan-temple-bali-indonesia-guitar-photographer.jpg" alt="Bali" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Bali, Indonesia</h3>
+            <p class="text-sm text-gray-600">Tropical retreats and serene vibes</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="https://1.bp.blogspot.com/-klHXHFbBkcg/Vh_oH8aFeyI/AAAAAAAADkI/WvdVpR4LWTc/s1600/CORT-NYC-StudyUSA07.jpg" alt="New York" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">New York, USA</h3>
+            <p class="text-sm text-gray-600">Urban charm and city adventures</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="https://ohmyfacts.com/wp-content/uploads/2024/04/20-fun-facts-about-tokyo-culture-tech-history-1714444714.jpg" alt="Tokyo" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Tokyo, Japan</h3>
+            <p class="text-sm text-gray-600">Cultural fusion and tech wonder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filterable Listings Section -->
+    <section id="categories" class="py-20 px-6 bg-white">
+      <h2 class="text-3xl font-bold text-center mb-8">Browse by Category</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition">Beach Homes</button>
+        <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition">Family Stays</button>
+        <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition">Cabins</button>
+        <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition">Countryside</button>
+        <button class="px-4 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition">Pet Friendly</button>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://static.fivestar.ie/venues/6/5/65395/subpage/photos/1522704208-6507.jpg" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Sunny Beach House</h3>
+            <p class="text-sm text-gray-600">Malibu, California</p>
+            <p class="text-sm text-gray-800 mt-1 font-semibold">$220/night</p>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://i.pinimg.com/originals/09/92/1c/09921ccde0c7c17e3e3bbe6135dd02dd.jpg" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Spacious Family Villa</h3>
+            <p class="text-sm text-gray-600">Orlando, Florida</p>
+            <p class="text-sm text-gray-800 mt-1 font-semibold">$180/night</p>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://i.pinimg.com/originals/09/dd/30/09dd3024e4627db96023f70ff1f54b5d.jpg" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Cozy Cabin in the Woods</h3>
+            <p class="text-sm text-gray-600">Aspen, Colorado</p>
+            <p class="text-sm text-gray-800 mt-1 font-semibold">$150/night</p>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://onekindesign.com/wp-content/uploads/2024/06/Napa-Valley-Wine-Country-Retreat-Holder-Parlette-Architecture-01-1-Kindesign-768x521.jpg" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Tranquil Country Home</h3>
+            <p class="text-sm text-gray-600">Napa Valley, CA</p>
+            <p class="text-sm text-gray-800 mt-1 font-semibold">$200/night</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="call-to-action" class="py-20 px-6 bg-blue-600 text-white text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Become a Host or Discover Unique Stays</h2>
+        <p class="mb-6 text-lg">Join a community of explorers and hosts reshaping how the world travels and shares spaces.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-200 transition">Start Hosting</a>
+          <a href="#" class="px-6 py-3 bg-transparent border border-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition">Explore Stays</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews, Safety Info, Loyalty Program Section -->
+    <section id="reviews" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Traveler Reviews</h3>
+          <p class="text-gray-600">Read real experiences from our global traveler community and find your perfect host.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Trusted Safety Standards</h3>
+          <p class="text-gray-600">We prioritize your peace of mind with 24/7 support, secure bookings, and cleanliness protocols.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold mb-2">Loyalty Perks</h3>
+          <p class="text-gray-600">Earn points with every booking and unlock exclusive deals and surprise upgrades.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Footer -->
+<footer class="text-center text-sm text-gray-500 py-4">
+  &copy; 2025 Akshaya Shetty. All rights reserved.
+</footer>
+
+</div> <!-- End of #mainContent -->
+
+  <script>
+    gsap.to("#logoSplash", { opacity: 0, duration: 1.2, delay: 1.5, onComplete: () => {
+      document.getElementById("logoSplash").style.display = "none";
+      gsap.to("#mainContent", { opacity: 1, duration: 1 });
+    }});
+  </script>
+</body>
+</html>
