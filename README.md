@@ -81,7 +81,7 @@ https://akshayaahh.github.io/wander-home/#reviews
 1. Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/wanderhome.git
+git clone https://github.com/akshayaahh/wanderhome.git
 ```
 
 2. Open `index.html` directly in your browser
