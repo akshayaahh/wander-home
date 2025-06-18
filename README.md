@@ -6,7 +6,7 @@ Welcome to **WanderHome**, your gateway to a world of beautiful getaways. From t
 
 ## 🌍 Live Demo
 
-[Click here to experience WanderHome](https://yourusername.github.io/wanderhome)
+https://akshayaahh.github.io/wander-home/#reviews
 
 ---
 
@@ -24,7 +24,7 @@ Welcome to **WanderHome**, your gateway to a world of beautiful getaways. From t
 
 ### UX Rationale
 
-* Included below (keep reading!)
+* Included below (keep reading!) or download ()
 
 ### Optional
 
